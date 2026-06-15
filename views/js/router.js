@@ -26,8 +26,6 @@ export function router() {
 
 export function navigate(path) {
     history.pushState({}, "", path)
-    console.log(path)
-    console.log(path)
     router()
 }
 

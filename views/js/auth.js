@@ -15,7 +15,6 @@ export async function login() {
         }, {
             withCredentials: true
         })
-        console.log(res)
 
         switch (res.status) {
             case 200:
@@ -52,7 +51,6 @@ export async function signup() {
         }, {
             withCredentials: true
         })
-        console.log(res)
         if (res.status == 201) {
             alert("account created successfully")
             navigate("/login")

@@ -120,7 +120,6 @@ export async function likePost(req, res) {
         let query = liked
             ? "INSERT IGNORE INTO likes(user_id, post_id) VALUES(?, ?)"
             : "DELETE FROM likes WHERE user_id=? and post_id=?"
-        console.log(query)
         let [result] = await pool.query(query, [userId, id])
 
         res.sendStatus(201)

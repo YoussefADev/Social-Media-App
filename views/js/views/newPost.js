@@ -7,7 +7,6 @@ import {renderPost} from "./feed.js"
 
 export async function renderNewPostModal() {
   try {
-    console.log(state)
     
     let user = state.user
     document.getElementById('body').innerHTML += `
