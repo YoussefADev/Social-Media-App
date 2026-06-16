@@ -79,7 +79,7 @@ project/
 ### Clone repository
 
 ```bash
-git clone https://github.com/your-username/social-media-app.git
+git clone https://github.com/YoussefADev/Social-Media-App.git
 cd social-media-app
 ```
 
@@ -89,29 +89,19 @@ cd social-media-app
 npm install
 ```
 
-### Create environment variables
+## Setup Environment Variables
 
-Create a `.env` file:
+Copy `.env.example` and create your own `.env` file:
 
-```env
-PORT=5000
-
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=social_media
-
-JWT_SECRET=your_secret
-JWT_REFRESH_SECRET=your_refresh_secret
+```bash
+cp .env.example .env
 ```
+
+Then fill in your database credentials and secrets.
 
 ### Start development server
 
-```bash
-npm run dev
-```
 
-or
 
 ```bash
 npm start
@@ -119,19 +109,33 @@ npm start
 
 ---
 
-## Database
+## Database Setup
 
-Import the provided SQL schema and create the required tables.
+1. Create a MySQL database:
 
-Example entities:
+```sql
+CREATE DATABASE social_media;
+```
 
-- Users
-- Posts
-- Comments
-- Likes
-- Refresh Tokens
+2. Import the schema file located at:
 
----
+```txt
+schema.sql
+```
+
+You can import it using:
+- MySQL Workbench
+- phpMyAdmin
+- DBeaver
+- MySQL CLI
+
+### Using MySQL CLI
+
+```bash
+mysql -u root -p social_media < schema.sql
+```
+
+The schema file contains all required tables and relationships for the application.
 
 ## Authentication Flow
 
@@ -212,4 +216,6 @@ This project was built to strengthen skills in:
 
 Built by [YoussefADev]
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/YoussefADev
+
+Repository: https://github.com/YoussefADev/Social-Media-App
