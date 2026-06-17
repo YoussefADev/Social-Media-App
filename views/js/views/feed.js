@@ -107,7 +107,6 @@ export async function renderFeed() {
         });
 
     } catch (err) {
-        alert("failed to load feed")
         console.log(err)
     }
     
